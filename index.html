@@ -1,3 +1,159 @@
-grgr
-gfrgr
-rgr
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的自我介绍</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 头部样式 */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            background-color: #e0e0e0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 卡片容器 */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        /* 技能条样式 */
+        .skill-bar {
+            background: #eee;
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #3498db;
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><rect width='100%' height='100%' fill='%23e0e0e0'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='40' fill='%23999'>头像</text></svg>" alt="头像" class="avatar">
+            <h1>小明</h1>
+            <p>热爱生活，追求进步</p>
+        </header>
+
+        <div class="cards-container">
+            <!-- 基本信息卡片 -->
+            <div class="card">
+                <h2>基本信息</h2>
+                <p>年龄：16岁</p>
+                <p>学校：阳光中学</p>
+                <p>班级：初三（2）班</p>
+                <p>梦想：成为一名优秀的程序员</p>
+            </div>
+
+            <!-- 兴趣爱好卡片 -->
+            <div class="card">
+                <h2>兴趣爱好</h2>
+                <p>📚 阅读科幻小说</p>
+                <p>🎮 玩创意类游戏</p>
+                <p>💻 学习编程</p>
+                <p>🎨 绘画设计</p>
+            </div>
+
+            <!-- 技能特长卡片 -->
+            <div class="card">
+                <h2>技能特长</h2>
+                <p>编程基础</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 60%"></div>
+                </div>
+                <p>数学能力</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+                <p>英语水平</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
